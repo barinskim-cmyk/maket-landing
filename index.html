@@ -503,6 +503,18 @@ section{padding:80px 0}
 .data-stat .num{font-size:36px;font-weight:700;color:#fff}
 .data-stat .lbl{font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px}
 
+
+/* Mobile: hide detail text behind "подробнее" */
+.demo-more-btn{display:none}
+@media(max-width:768px){
+.demo-text:not(.dm-expanded) .demo-point-detail,
+.demo-text:not(.dm-expanded) > p{display:none}
+.demo-more-btn{display:inline-block;font-size:13px;color:#999;cursor:pointer;padding:6px 0;margin-top:4px;border:none;background:none;font-family:inherit;text-decoration:underline;text-underline-offset:2px}
+.demo-more-btn:hover{color:#555}
+.demo-text.dm-expanded .demo-more-btn span::after{content:' ↑'}
+.demo-text:not(.dm-expanded) .demo-more-btn span::after{content:' ↓'}
+}
+
 /* ── CTA ── */
 .cta-section{text-align:center;padding:80px 0 100px}
 .cta-section h2{margin-bottom:12px}
@@ -624,36 +636,11 @@ footer p{font-size:13px;color:#aaa}
   </div>
 </section>
 
-<!-- ── Mission ── -->
-<section class="mission section" id="mission">
-  <div class="container fade-up">
-    <div class="mission-title">Наша цель</div>
-    <div class="mission-headline">Система для людей,<br>а не люди для системы</div>
-    <div class="mission-cards">
-      <div class="mission-card">
-        <div class="mission-card-num">01</div>
-        <h3>Свобода, а не контроль</h3>
-        <p>Система не ограничивает и не создаёт новые рамки. Она подстраивается под вашу ролевую модель и структуру контента.</p>
-      </div>
-      <div class="mission-card">
-        <div class="mission-card-num">02</div>
-        <h3>Прозрачность как двигатель</h3>
-        <p>Когда команда и клиент видят общую реальность и друг друга — процесс начинает развиваться.</p>
-      </div>
-      <div class="mission-card">
-        <div class="mission-card-num">03</div>
-        <h3>Время стоит дорого</h3>
-        <p>Всё, что можно не делать руками — должны делать системы. То, что нужно делать руками — должно быть удобным.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── Problem ── -->
 <section class="problem" id="problem">
   <div class="container">
     <div class="problem-header fade-up">
-      <h2>Знакомая ситуация?</h2>
+      <h2>Если 3 из 8 пунктов про ваш продакшн — мы подходим друг другу</h2>
     </div>
     <div class="pain-grid">
       <div class="pain-card fade-up">
@@ -706,25 +693,51 @@ footer p{font-size:13px;color:#aaa}
   </div>
 </section>
 
+<!-- ── Mission ── -->
+<section class="mission section" id="mission">
+  <div class="container fade-up">
+    <div class="mission-title">Наша цель</div>
+    <div class="mission-headline">Система для людей,<br>а не люди для системы</div>
+    <div class="mission-cards">
+      <div class="mission-card">
+        <div class="mission-card-num">01</div>
+        <h3>Свобода, а не контроль</h3>
+        <p>Система не ограничивает и не создаёт новые рамки. Она подстраивается под вашу ролевую модель и структуру контента.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-card-num">02</div>
+        <h3>Прозрачность как двигатель</h3>
+        <p>Когда команда и клиент видят общую реальность и друг друга — процесс начинает развиваться.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-card-num">03</div>
+        <h3>Время стоит дорого</h3>
+        <p>Всё, что можно не делать руками — должны делать системы. То, что нужно делать руками — должно быть удобным.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── Demo 1: Structure Builder ── -->
 <section class="demo-section" id="demo-container">
   <div class="container">
     <div class="demo-layout">
       <div class="demo-text fade-up">
         <div class="label">Структура</div>
-        <h2>Нет ничего проще, чем создать структуру</h2>
+        <h2>С Maket просто показать логику и взаимосвязи</h2>
         <div class="demo-point">
-<div class="demo-point-lead">Вы уже знаете, как устроена ваша съёмка:</div>
-<div class="demo-point-detail">карточки товаров, подборки для SMM, материалы для PR.</div>
+<div class="demo-point-lead">Структура уже у вас в голове</div>
+<div class="demo-point-detail">Карточки товаров, подборки для SMM, баннеры. Maket делает её видимой — без таблиц и папок.</div>
 </div>
 <div class="demo-point">
-<div class="demo-point-lead">Maket не навязывает свою структуру</div>
-<div class="demo-point-detail">— он помогает увидеть и сохранить вашу во всей её многогранности. Создайте 1 шаблон или 10 и перетащите фото в карточку — нет ничего проще.</div>
+<div class="demo-point-lead">Один шаблон или десять — без ограничений</div>
+<div class="demo-point-detail">Создайте сетку, перетащите фото в слот. Структура появляется за минуту и не ломается при переименовании.</div>
 </div>
 <div class="demo-point">
-<div class="demo-point-lead">Все работают в одной системе.</div>
-<div class="demo-point-detail">Фотограф, стилист, ретушёр, клиент — каждый видит свою часть и ничего не теряется.</div>
+<div class="demo-point-lead">Все роли — одно пространство</div>
+<div class="demo-point-detail">Фотограф, стилист, ретушёр, клиент. Каждый видит свою часть, ничего не теряется.</div>
 </div>
+        <button class="demo-more-btn" onclick="this.closest('.demo-text').classList.toggle('dm-expanded')"><span>подробнее</span></button>
         <div class="demo-hint">Переключайте вкладки, выбирайте карточки в списке и перетаскивайте фото в слоты</div>
       </div>
       <div class="card-demo fade-up delay-1">
@@ -800,10 +813,8 @@ footer p{font-size:13px;color:#aaa}
 <div class="demo-point">
 <div class="demo-point-lead">Вы увидите все противоречия до того, как они станут переделкой.</div>
 </div>
-        <div class="demo-point">
-<div class="demo-point-lead">Комментарий к карточке автоматически применяется ко всем фото внутри</div>
-<div class="demo-point-detail">Не нужно писать одно и то же пять раз.</div>
-</div>
+        <p>Комментарий к карточке автоматически применяется ко всем фото внутри — не нужно писать одно и то же пять раз.</p>
+        <button class="demo-more-btn" onclick="this.closest('.demo-text').classList.toggle('dm-expanded')"><span>подробнее</span></button>
       </div>
       <div class="card-life fade-up delay-1" id="cardLife"></div>
     </div>
@@ -830,6 +841,7 @@ footer p{font-size:13px;color:#aaa}
 <div class="demo-point-lead">Maket работает с данными — задачи идут параллельно</div>
 <div class="demo-point-detail">Фотограф делает цветокоррекцию, клиент оставляет комментарии — ретушёр получает всё вместе.</div>
 </div>
+        <button class="demo-more-btn" onclick="this.closest('.demo-text').classList.toggle('dm-expanded')"><span>подробнее</span></button>
         <div class="demo-hint">Нажмите на этап, чтобы увидеть детали</div>
       </div>
       <div class="pipeline-demo fade-up delay-1">
@@ -890,6 +902,7 @@ footer p{font-size:13px;color:#aaa}
 <div class="demo-point-lead">Понятно, кто и когда принял решение</div>
 <div class="demo-point-detail">Решение фиксируется с именем и временем.</div>
 </div>
+        <button class="demo-more-btn" onclick="this.closest('.demo-text').classList.toggle('dm-expanded')"><span>подробнее</span></button>
         <div class="demo-hint">Попробуйте: посмотрите соседние кадры свайпом. Ваш выбор автоматически сохраняется</div>
       </div>
       <div class="fade-up delay-1">
@@ -953,6 +966,7 @@ footer p{font-size:13px;color:#aaa}
 <div class="demo-point-lead">После подтверждения все файлы переименовываются в считанные секунды</div>
 <div class="demo-point-detail">IMG_4201.jpg становится ALX-T201_front_01.jpg</div>
 </div>
+        <button class="demo-more-btn" onclick="this.closest('.demo-text').classList.toggle('dm-expanded')"><span>подробнее</span></button>
         <div class="demo-hint">Нажмите "Расставить (AI)" чтобы увидеть как это работает</div>
       </div>
       <div class="ai-demo fade-up delay-1">
