@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="Maket CP">
+  <rect x="10" y="15" width="8" height="30" fill="#1a1a1a"/>
+  <rect x="25" y="20" width="8" height="20" fill="#1a1a1a"/>
+  <rect x="40" y="15" width="8" height="30" fill="#1a1a1a"/>
+  <text x="60" y="38" font-family="Inter, -apple-system, Helvetica, Arial, sans-serif" font-size="22" fill="#1a1a1a" font-weight="600">Maket CP</text>
+</svg>
