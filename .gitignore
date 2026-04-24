@@ -1,0 +1,26 @@
+# Build outputs
+node_modules/
+dist/
+.DS_Store
+
+# --- PII safeguard (added 2026-04-24 as standard across maket-cp/landing) ---
+# Block files containing client-name tokens. Override per-file with `git add -f <path>`.
+**/*ekonika*
+**/*Ekonika*
+**/*EKONIKA*
+**/*Эконика*
+**/*ЭКОНИКА*
+**/*эконика*
+**/*moiseeva*
+**/*Moiseeva*
+**/*Моисеева*
+**/*markformelle*
+**/*Markformelle*
+**/*MarkFormelle*
+**/*MARKFORMELLE*
+**/*Mark Formelle*
+**/*Марк Формель*
+!**/client-a*
+!**/tester-a*
+!**/surname-hidden*
+# --- end PII safeguard ---
